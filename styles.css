@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
     .examples-track {
         gap: 16px;
         padding-left: 16px;
-        animation: scroll-right-to-left 20s linear infinite;
+        animation: scroll-right-to-left 35s linear infinite;
     }
     
     .example-title {
@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .examples-track {
-        animation: scroll-right-to-left 15s linear infinite;
+        animation: scroll-right-to-left 30s linear infinite;
     }
     
     .example-title {
@@ -800,7 +800,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section.alt-bg {
-    background: linear-gradient(135deg, #141414 0%, #1f1f1f 100%);
+    background: #1B202A;
+    position: relative;
+}
+
+.content-section.special-section {
+    background: linear-gradient(to bottom, #000000 0%, #1B202A 100%);
     position: relative;
 }
 
@@ -1016,6 +1021,17 @@ h1, h2, h3, h4, h5, h6 {
     /* Performance optimization for mobile */
     will-change: transform;
     transform: translateZ(0);
+}
+
+.testimonial-slider:hover {
+    animation-play-state: paused;
+}
+
+/* Mobile testimonial slider speed adjustment */
+@media (max-width: 768px) {
+    .testimonial-slider {
+        animation: slide-right-to-left 50s linear infinite;
+    }
 }
 
 .testimonial-card {
@@ -1866,8 +1882,8 @@ h1, h2, h3, h4, h5, h6 {
     
     .testimonial-card {
         width: 280px;
-        height: 300px;
-        padding: 18px 18px 55px 18px;
+        height: 320px;
+        padding: 24px 18px 65px 18px;
     }
     
     .testimonial-quote {
@@ -1877,26 +1893,26 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .testimonial-header {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 1.2rem;
         margin-bottom: 0.8rem;
     }
     
     .testimonial-card p {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.5;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
     }
     
     .testimonial-author {
-        bottom: 10px;
+        bottom: 18px;
         left: 18px;
         right: 18px;
         font-size: 0.8rem;
     }
     
     .testimonial-slider {
-        animation: slide-right-to-left 25s linear infinite;
+        animation: slide-right-to-left 35s linear infinite;
         gap: 16px;
     }
     
