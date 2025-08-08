@@ -306,3 +306,32 @@ mobileMenuButton.style.display = 'none';
 if (window.innerWidth <= 768) {
     // Mobile menu logic can be added here
 }
+
+// Fix testimonial slider touch behavior on mobile only
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+    
+    if (testimonialSlider) {
+        // Only add event listeners for touch devices
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        
+        if (isTouchDevice) {
+            // Mobile/Touch devices - handle touch events to prevent sticky hover
+            testimonialSlider.addEventListener('touchstart', function(e) {
+                this.style.animationPlayState = 'paused';
+            }, { passive: true });
+            
+            testimonialSlider.addEventListener('touchend', function(e) {
+                // Force resume animation after touch
+                setTimeout(() => {
+                    this.style.animationPlayState = 'running';
+                }, 10);
+            }, { passive: true });
+            
+            testimonialSlider.addEventListener('touchcancel', function(e) {
+                this.style.animationPlayState = 'running';
+            }, { passive: true });
+        }
+        // Desktop will rely entirely on CSS :hover pseudo-class
+    }
+});
