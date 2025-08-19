@@ -178,8 +178,8 @@ window.addEventListener('scroll', function() {
 
 // Countdown Timer Functionality
 function initCountdown() {
-    // Set target date: August 18, 2025 23:59:59 (based on MD file: 8월 18일(월) 자정까지)
-    const targetDate = new Date('2025-08-18T23:59:59').getTime();
+    // Set target date: August 28, 2025 16:00:00 (8월 28일(목) 16:00까지)
+    const targetDate = new Date('2025-08-28T16:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -203,13 +203,23 @@ function initCountdown() {
             document.getElementById('countdown-minutes').textContent = '00';
             document.getElementById('countdown-seconds').textContent = '00';
             
-            // Optionally disable the button or show "모집 마감" message
-            const ctaButton = document.querySelector('.bottom-cta .cta-button');
-            if (ctaButton) {
-                ctaButton.textContent = '모집 마감';
-                ctaButton.disabled = true;
-                ctaButton.style.opacity = '0.5';
-                ctaButton.style.cursor = 'not-allowed';
+            // Disable both header and bottom CTA buttons
+            const bottomCtaButton = document.querySelector('.bottom-cta .cta-button');
+            const headerCtaButton = document.querySelector('.header-cta');
+            
+            if (bottomCtaButton) {
+                bottomCtaButton.textContent = '모집 마감';
+                bottomCtaButton.disabled = true;
+                bottomCtaButton.style.opacity = '0.5';
+                bottomCtaButton.style.cursor = 'not-allowed';
+            }
+            
+            if (headerCtaButton) {
+                headerCtaButton.textContent = '모집 마감';
+                headerCtaButton.disabled = true;
+                headerCtaButton.style.opacity = '0.5';
+                headerCtaButton.style.cursor = 'not-allowed';
+                headerCtaButton.style.pointerEvents = 'none';
             }
         }
     }
@@ -221,6 +231,37 @@ function initCountdown() {
 
 // Initialize countdown when page loads
 document.addEventListener('DOMContentLoaded', initCountdown);
+
+// Accordion functionality for curriculum
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const accordionItem = this.parentElement;
+            const accordionContent = accordionItem.querySelector('.accordion-content');
+            const accordionIcon = this.querySelector('.accordion-icon');
+            const isActive = this.classList.contains('active');
+            
+            // Close all other accordion items
+            accordionHeaders.forEach(otherHeader => {
+                if (otherHeader !== this) {
+                    otherHeader.classList.remove('active');
+                    otherHeader.parentElement.querySelector('.accordion-content').classList.remove('active');
+                }
+            });
+            
+            // Toggle current accordion item
+            if (isActive) {
+                this.classList.remove('active');
+                accordionContent.classList.remove('active');
+            } else {
+                this.classList.add('active');
+                accordionContent.classList.add('active');
+            }
+        });
+    });
+});
 
 // Typing Animation
 function initTypingAnimation() {
