@@ -369,39 +369,108 @@
                 <div style="text-align: center; margin-bottom: 1rem; font-size: 1.2rem; color: rgba(255, 255, 255, 0.8);">"당신의 상상을 현실로 만들"</div>
                 <h2 class="section-title">5일간의 압축 커리큘럼</h2>
                 <div class="section-content">
-                    <div style="margin: 2rem auto; max-width: 800px;">
-                        <table style="width: 100%; border-collapse: collapse; background: transparent;">
-                            <tbody>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 1</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">바이브 코딩 세팅, 요구사항 명세를 통한 바이브코딩 시연, 요구사항 명세 작성 방법, 현재 바이브 코딩의 한계와 미래, Front-end와 Back-end 기초지식, 게임 개발 기초 지식</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 2</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">GitHub 기초지식, 인프라 기초지식, 배포, 바이브 코딩 실습, 바이브 코딩의 프롬프트 입력 방법, 과제 1</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 3</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">Claude Code의 고급 기능 활용법, 백엔드 기초지식</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 4</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">바이브 코딩을 위한 디자인(UIUX 디자인 기초 지식, Claude Code 디자인 적용 방법, 생성형 AI 활용 브랜드 디자인, 디자인 툴 Figma 소개 등)</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 5</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">시스템 설계, 백엔드 배포를 위해 알아야 할 지식, 디자인 팁과 바이브 클론 코딩, 백엔드 배포</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 6</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">결제, 광고, 함께 사용하면 좋을 소프트웨어, 구독하면 좋을 채널, final 과제2 안내</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 1.5rem 0; width: 80px; font-weight: 700; color: var(--primary-blue); vertical-align: top; text-align: left;">Day 7</td>
-                                    <td style="padding: 1.5rem 0; color: var(--white); text-align: left;">각자 제작한 결과물 발표</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="curriculum-accordion">
+                        <!-- Day 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header active" data-day="1">
+                                <span class="accordion-day">Day 1</span>
+                                <span class="accordion-title">바이브 코딩 첫걸음</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content active">
+                                <ul class="curriculum-list">
+                                    <li>(온라인 라이브 부트캠프) 자기소개</li>
+                                    <li>바이브 코딩의 개념과 시연</li>
+                                    <li>툴 비교(VSCode, Cursor, Claude Code, Gemini CLI)</li>
+                                    <li>바이브 코딩 세팅</li>
+                                    <li>요구사항 명세를 통한 바이브 코딩 시연</li>
+                                    <li>프롬프트와 요구사항 명세 작성 방법</li>
+                                    <li>현재 바이브 코딩의 한계와 미래</li>
+                                    <li>터미널</li>
+                                    <li>프론트엔드 기초 지식</li>
+                                    <li>데스크톱 앱 만들기</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="2">
+                                <span class="accordion-day">Day 2</span>
+                                <span class="accordion-title">바이브 코딩을 위한 디자인</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>UI/UX 디자인 기초 지식</li>
+                                    <li>Claude Code 디자인 적용 방법</li>
+                                    <li>생성형 AI 활용 브랜드 디자인</li>
+                                    <li>디자인 툴 Figma 소개 등</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 3 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="3">
+                                <span class="accordion-day">Day 3</span>
+                                <span class="accordion-title">프론트엔드와 실습</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>GitHub 기초지식</li>
+                                    <li>인프라 기초지식</li>
+                                    <li>프론트엔드 배포 방법</li>
+                                    <li>바이브 코딩 실습</li>
+                                    <li>서비스 기획</li>
+                                    <li>바이브 코딩의 프롬프트 입력 방법</li>
+                                    <li>Claude Code의 고급 기능 활용</li>
+                                    <li>과제 1</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 4 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="4">
+                                <span class="accordion-day">Day 4</span>
+                                <span class="accordion-title">백엔드 이해와 배포</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>백엔드 기술 선택 가이드</li>
+                                    <li>백엔드 기초 지식</li>
+                                    <li>백엔드 실행 방법</li>
+                                    <li>백엔드 프롬프트 시스템 설계</li>
+                                    <li>백엔드 배포를 위해 알아야 할 지식</li>
+                                    <li>백엔드 배포 방법</li>
+                                    <li>백엔드 배포 실습(Render)</li>
+                                    <li>과제2</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 5 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="5">
+                                <span class="accordion-day">Day 5</span>
+                                <span class="accordion-title">프로젝트 완성과 확장 기능</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>위니브 캔버스</li>
+                                    <li>디자인 팁과 바이브 클론 코딩</li>
+                                    <li>댓글 개발 없이 댓글 기능 구현</li>
+                                    <li>조회수 개발 없이 조회수 기능 구현</li>
+                                    <li>결제 프로세스 이해</li>
+                                    <li>함께 사용하면 좋은 소프트웨어</li>
+                                    <li>각자 제작한 결과물 발표</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
