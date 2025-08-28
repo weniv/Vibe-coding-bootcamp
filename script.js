@@ -179,7 +179,7 @@ window.addEventListener('scroll', function() {
 // Countdown Timer Functionality
 function initCountdown() {
     // Set target date: August 28, 2025 16:00:00 (8월 28일(목) 16:00까지)
-    const targetDate = new Date('2025-08-28T16:00:00').getTime();
+    const targetDate = new Date('2025-08-29T16:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
