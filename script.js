@@ -178,8 +178,8 @@ window.addEventListener('scroll', function() {
 
 // Countdown Timer Functionality
 function initCountdown() {
-    // Set target date: August 28, 2025 16:00:00 (8월 28일(목) 16:00까지)
-    const targetDate = new Date('2025-08-28T16:00:00').getTime();
+    // Set target date: August 29, 2025 16:00:00 (8월 29일(금) 16:00까지)
+    const targetDate = new Date('2025-08-29T16:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -203,24 +203,8 @@ function initCountdown() {
             document.getElementById('countdown-minutes').textContent = '00';
             document.getElementById('countdown-seconds').textContent = '00';
             
-            // Disable both header and bottom CTA buttons
-            const bottomCtaButton = document.querySelector('.bottom-cta .cta-button');
-            const headerCtaButton = document.querySelector('.header-cta');
-            
-            if (bottomCtaButton) {
-                bottomCtaButton.textContent = '모집 마감';
-                bottomCtaButton.disabled = true;
-                bottomCtaButton.style.opacity = '0.5';
-                bottomCtaButton.style.cursor = 'not-allowed';
-            }
-            
-            if (headerCtaButton) {
-                headerCtaButton.textContent = '모집 마감';
-                headerCtaButton.disabled = true;
-                headerCtaButton.style.opacity = '0.5';
-                headerCtaButton.style.cursor = 'not-allowed';
-                headerCtaButton.style.pointerEvents = 'none';
-            }
+            // Keep buttons active even after countdown ends
+            // Removed button disabling code
         }
     }
     
@@ -231,6 +215,35 @@ function initCountdown() {
 
 // Initialize countdown when page loads
 document.addEventListener('DOMContentLoaded', initCountdown);
+
+// Footer visibility observer to hide bottom CTA
+function initFooterObserver() {
+    const footer = document.querySelector('.footer');
+    const bottomCTA = document.querySelector('.bottom-cta');
+    
+    if (!footer || !bottomCTA) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Footer is visible, hide bottom CTA
+                bottomCTA.classList.add('hidden');
+            } else {
+                // Footer is not visible, show bottom CTA
+                bottomCTA.classList.remove('hidden');
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of footer is visible
+    });
+    
+    observer.observe(footer);
+}
+
+// Initialize footer observer when page loads
+document.addEventListener('DOMContentLoaded', initFooterObserver);
 
 // Accordion functionality for curriculum
 document.addEventListener('DOMContentLoaded', function() {

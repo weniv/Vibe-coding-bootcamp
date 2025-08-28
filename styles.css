@@ -610,7 +610,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Main Content */
 .main-content {
     margin-top: 70px;
-    padding-bottom: 125px; /* Add space for fixed bottom CTA */
+    padding-bottom: 3rem; /* Space between content and footer */
     overflow-x: hidden;
     width: 100%;
     margin-left: auto;
@@ -1433,6 +1433,86 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+/* Footer */
+.footer {
+    background: #0a0e13;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2rem 0;
+    border-top: 1px solid #21262d;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-image {
+    height: 32px;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.footer-company-info {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) saturate(100%) invert(70%);
+    transition: filter 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(0) saturate(100%) invert(90%);
+}
+
 /* Bottom CTA - Dark Theme */
 /* Recruitment Banner */
 .recruitment-banner {
@@ -1464,6 +1544,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     z-index: 999;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bottom-cta.hidden {
+    transform: translateY(100%);
 }
 
 
@@ -1670,7 +1756,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .main-content {
         margin-top: 80px;
-        padding-bottom: 120px; /* Add space for fixed bottom CTA */
+        padding-bottom: 2.5rem; /* Space between content and footer */
     }
     
     .navigation {
@@ -1912,6 +1998,47 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0.65rem;
     }
     
+    /* Footer mobile styles */
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer-container {
+        padding: 0 16px;
+    }
+    
+    .footer-logo-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .footer-logo-image {
+        height: 28px;
+    }
+    
+    .footer-copyright {
+        font-size: 0.85rem;
+    }
+    
+    .footer-company-info {
+        font-size: 0.8rem;
+    }
+    
+    .footer-social-links {
+        gap: 0.75rem;
+    }
+    
+    .social-link {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
     .instructor-card {
         padding: 20px;
     }
@@ -2016,7 +2143,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     .main-content {
         margin-top: 85px;
-        padding-bottom: 110px; /* Add space for fixed bottom CTA */
+        padding-bottom: 2rem; /* Space between content and footer */
     }
     
     .navigation {
@@ -2170,6 +2297,41 @@ h1, h2, h3, h4, h5, h6 {
     .curriculum-list li {
         font-size: 0.85rem;
         padding-left: 1.25rem;
+    }
+    
+    /* Footer small mobile styles */
+    .footer {
+        padding: 1rem 0;
+    }
+    
+    .footer-container {
+        padding: 0 12px;
+    }
+    
+    .footer-logo-image {
+        height: 24px;
+    }
+    
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+    
+    .footer-company-info {
+        font-size: 0.75rem;
+    }
+    
+    .footer-social-links {
+        gap: 0.5rem;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
     }
     
     .nav-menu {
