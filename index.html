@@ -35,7 +35,7 @@
                         <li><a href="#section9" class="nav-link">신청 정보</a></li>
                     </ul>
                 </nav>
-                <a href="https://forms.gle/ivsKCiouqADyCBEY8" target="_blank" class="cta-button header-cta">신청하기</a>
+                <a href="https://forms.gle/irPW4kL8LpArT9PP7" target="_blank" class="cta-button header-cta">신청하기</a>
             </div>
         </div>
     </header>
@@ -135,6 +135,41 @@
                         </div>
                     </div>
                     
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Course Open Section -->
+        <section id="developer-open" class="content-section developer-open-section">
+            <div class="container">
+                <div class="developer-open-content">
+                    <div class="developer-open-badge">개발자 과정 오픈</div>
+                    <h2 class="developer-open-title">눈 떠보니 AI 시대, 주니어 개발자의 필수 과정!</h2>
+                    <p class="developer-open-info">
+                        월-금 저녁 2시간 | 총 10시간 | 실시간 온라인
+                    </p>
+
+                    <div class="developer-curriculum-section">
+                        <h3 class="curriculum-heading">커리큘럼:</h3>
+                        <ul class="curriculum-brief-list">
+                            <li>바이브 코딩 이해와 실무 적용</li>
+                            <li>AI 개발 환경 세팅과 실무 워크플로우 구축</li>
+                            <li>바이브 코딩을 위한 디자인</li>
+                            <li>프론트엔드·백엔드 통합 개발 및 배포 실습</li>
+                            <li>결과물 완성 및 전문가 피드백</li>
+                        </ul>
+                    </div>
+
+                    <div class="developer-recommend-section">
+                        <h3 class="recommend-heading">이런 분께 추천해요</h3>
+                        <div class="recommend-list">
+                            <div class="recommend-item">AI 도구는 쓰지만 제대로 활용 못하는 개발자</div>
+                            <div class="recommend-item">개발 속도를 높이고 싶은 주니어</div>
+                            <div class="recommend-item">실무에서 바로 써먹을 스킬이 필요한 분</div>
+                        </div>
+                    </div>
+
+                    <a href="#section5" class="developer-open-cta">커리큘럼 상세 보기</a>
                 </div>
             </div>
         </section>
@@ -331,28 +366,37 @@
             <div class="container">
                 <h2 class="section-title">수료생 결과물을 확인해 보세요!</h2>
                 <div class="section-content">
-                    <div class="highlight-text">단 4일만에 만든 결과물입니다.</div>
                     <div class="project-grid">
+                        <a href="https://soundbunker.github.io/birdworldcup/" target="_blank" class="project-card project-card-link">
+                            <div class="project-image" style="background-image: url('img/ex-10.png');"></div>
+                            <h3>새소리 이상형 월드컵 <span class="project-arrow">→</span></h3>
+                            <p>일반인 과정 1기 이*원님</p>
+                        </a>
                         <a href="https://dooook-kr.github.io/triusbooks/" target="_blank" class="project-card project-card-link">
                             <div class="project-image" style="background-image: url('img/ex-1.png');"></div>
                             <h3>트리우스 북스(Trius Books) <span class="project-arrow">→</span></h3>
-                            <p>바이브 1기 최*옥님</p>
+                            <p>일반인 과정 1기 최*옥님</p>
                         </a>
                         <div class="project-card">
                             <div class="project-image" style="background-image: url('img/ex-2.png');"></div>
                             <h3>토너먼트 경기 대진표 추첨 프로그램</h3>
-                            <p>바이브 1기 한*철님</p>
+                            <p>일반인 과정 1기 한*철님</p>
                         </div>
                         <div class="project-card">
                             <div class="project-image" style="background-image: url('img/ex-3.png');"></div>
                             <h3>모이소 홈페이지 개발</h3>
-                            <p>바이브 2기 송*철님</p>
+                            <p>일반인 과정 2기 송*철님</p>
                         </div>
                         <div class="project-card">
                             <div class="project-image" style="background-image: url('img/ex-4.png');"></div>
                             <h3>AI 기반 책 추천 서비스 'BookV'</h3>
-                            <p>바이브 2기 김*아님</p>
+                            <p>일반인 과정 2기 김*아님</p>
                         </div>
+                        <a href="https://aebonlee.github.io/stepup-cloud/" target="_blank" class="project-card project-card-link">
+                            <div class="project-image" style="background-image: url('img/ex-11.png');"></div>
+                            <h3>학습 관리 서비스 '스텝업 클라우드' <span class="project-arrow">→</span></h3>
+                            <p>일반인 과정 2기 이*영님 & 이*본님</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -365,7 +409,14 @@
                 <div style="text-align: center; margin-bottom: 1rem; font-size: 1.2rem; color: rgba(255, 255, 255, 0.8);">"당신의 상상을 현실로 만들"</div>
                 <h2 class="section-title">5일간의 압축 커리큘럼</h2>
                 <div class="section-content">
-                    <div class="curriculum-accordion">
+                    <!-- Curriculum Tabs -->
+                    <div class="curriculum-tabs">
+                        <button class="curriculum-tab" data-curriculum="general">일반인 과정</button>
+                        <button class="curriculum-tab active" data-curriculum="developer">개발자 과정</button>
+                    </div>
+
+                    <!-- General Curriculum -->
+                    <div class="curriculum-accordion curriculum-general">
                         <!-- Day 1 -->
                         <div class="accordion-item">
                             <button class="accordion-header active" data-day="1">
@@ -464,6 +515,100 @@
                                     <li>결제 프로세스 이해</li>
                                     <li>함께 사용하면 좋은 소프트웨어</li>
                                     <li>각자 제작한 결과물 발표</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Developer Curriculum -->
+                    <div class="curriculum-accordion curriculum-developer active">
+                        <!-- Day 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header active" data-day="1">
+                                <span class="accordion-day">Day 1</span>
+                                <span class="accordion-title">바이브 코딩 이해와 실무 적용</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content active">
+                                <ul class="curriculum-list">
+                                    <li>자기소개</li>
+                                    <li>바이브 코딩의 개념과 시연</li>
+                                    <li>툴 비교(Codex, Gemini CLI, Claude Code, Claude Code Web)</li>
+                                    <li>바이브 코딩 세팅</li>
+                                    <li>회사에서 사용할 수 있는 바이브 코딩 프로세스의 요구사항</li>
+                                    <li>요구사항 명세를 통한 바이브 코딩 시연</li>
+                                    <li>프롬프트와 요구사항 명세 작성 방법</li>
+                                    <li>현재 바이브 코딩의 한계와 미래</li>
+                                    <li>회사 도입을 위한 전략</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="2">
+                                <span class="accordion-day">Day 2</span>
+                                <span class="accordion-title">AI 개발 환경 세팅과 실무 워크플로우 구축</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>개발자를 위한 터미널, FE, BE, 인프라, 배포 기초 지식</li>
+                                    <li>GitHub와 Claude 연동, 코드 리뷰 프로세스 정립</li>
+                                    <li>실무 사용 가능한 기획, 설계, FE개발, BE개발, 테스트 등 프롬프트 템플릿 라이브러리 구축 실습</li>
+                                    <li>실무 사용 가능한 프롬프트 시스템 구축 실습</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 3 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="3">
+                                <span class="accordion-day">Day 3</span>
+                                <span class="accordion-title">바이브 코딩을 위한 디자인</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>AI의 디자인은 왜 보라색인가?</li>
+                                    <li>레퍼런스 분석으로 '좋은 디자인'을 알아보는 눈 만들기</li>
+                                    <li>UI/UX 디자인의 중요성과 기본 개념</li>
+                                    <li>디자인 시스템이란?</li>
+                                    <li>바이브 디자인 프로세스 소개</li>
+                                    <li>디자인 툴 Figma 소개 및 활용</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 4 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="4">
+                                <span class="accordion-day">Day 4</span>
+                                <span class="accordion-title">프론트엔드·백엔드 통합 개발 및 배포 실습</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>백엔드 개발자를 위한 FE 서비스 제작 및 배포</li>
+                                    <li>프론트엔드 개발자를 위한 BE 서비스 제작 및 배포</li>
+                                    <li>바이브 코딩 기술 선택 가이드</li>
+                                    <li>과제</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Day 5 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-day="5">
+                                <span class="accordion-day">Day 5</span>
+                                <span class="accordion-title">결과물 완성 및 발표</span>
+                                <span class="accordion-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="curriculum-list">
+                                    <li>함께 사용 가능한 부가 서비스 소개(위니브 캔버스 등)</li>
+                                    <li>디자인 팁과 바이브 클론 코딩</li>
+                                    <li>각자 제작한 결과물 및 템플릿 발표</li>
                                 </ul>
                             </div>
                         </div>
@@ -668,28 +813,16 @@
                         <table style="width: 100%; border-collapse: collapse; background: transparent;">
                             <tbody>
                                 <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">모집 대상</td>
-                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">열정 있는 일반인 누구나</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">모집 마감</td>
-                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;"><strong>8월 29일(금) 16:00까지</strong></td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
                                     <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">최종 안내</td>
-                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">8월 29일(금) 17시 개별 연락 예정</td>
+                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">강의 시작 전 주 금요일 17시에 개별 연락 예정</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
                                     <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">OT(ZOOM) 안내</td>
-                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">8월 29일(금) 19시에 영상으로 제공됩니다.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                                    <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">강의 일정</td>
-                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">8월 1일(월), 2일(화), 3일(수), 4일(목), 5일(금)</td>
+                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">강의 시작 전 주 금요일 19시에 영상으로 제공됩니다.</td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
                                     <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">강의 시간</td>
-                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">일자별 19:00 ~ 22:00(3시간)</td>
+                                    <td style="padding: 1.25rem 0; color: var(--white); text-align: left;">일자별 오후 7시 30분 ~ 9시 30분 (2시간)</td>
                                 </tr>
                                 <tr>
                                     <td style="padding: 1.25rem 0; width: 140px; font-weight: 600; color: var(--gray-400); vertical-align: top; text-align: left;">진행 방식</td>
@@ -785,7 +918,7 @@
     <div class="bottom-cta">
         <!-- Recruitment Banner inside CTA -->
         <div class="recruitment-banner">
-            <div class="banner-text">저녁 7–10시, 바이브 코딩 4기 모집 중!</div>
+            <div class="banner-text">AI 시대의 주니어 개발자, 바이브 코딩 5기에서 성장하세요.</div>
         </div>
         
         <div class="container">
@@ -799,7 +932,7 @@
                         <span id="countdown-seconds">00</span>초
                     </div>
                 </div>
-                <a href="https://forms.gle/ivsKCiouqADyCBEY8" target="_blank" class="cta-button">신청하기</a>
+                <a href="https://forms.gle/irPW4kL8LpArT9PP7" target="_blank" class="cta-button">신청하기</a>
             </div>
         </div>
     </div>

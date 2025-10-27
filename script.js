@@ -178,8 +178,8 @@ window.addEventListener('scroll', function() {
 
 // Countdown Timer Functionality
 function initCountdown() {
-    // Set target date: August 29, 2025 16:00:00 (8월 29일(금) 16:00까지)
-    const targetDate = new Date('2025-08-29T16:00:00').getTime();
+    // Set target date: November 14, 2025 16:00:00 (11월 14일(금) 16:00까지)
+    const targetDate = new Date('2025-11-14T16:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -245,25 +245,57 @@ function initFooterObserver() {
 // Initialize footer observer when page loads
 document.addEventListener('DOMContentLoaded', initFooterObserver);
 
+// Curriculum Tab Switching
+document.addEventListener('DOMContentLoaded', function() {
+    const curriculumTabs = document.querySelectorAll('.curriculum-tab');
+    const generalCurriculum = document.querySelector('.curriculum-general');
+    const developerCurriculum = document.querySelector('.curriculum-developer');
+
+    curriculumTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const curriculumType = this.getAttribute('data-curriculum');
+
+            // Remove active class from all tabs
+            curriculumTabs.forEach(t => t.classList.remove('active'));
+
+            // Add active class to clicked tab
+            this.classList.add('active');
+
+            // Show/hide curriculum sections
+            if (curriculumType === 'general') {
+                generalCurriculum.classList.add('active');
+                developerCurriculum.classList.remove('active');
+            } else if (curriculumType === 'developer') {
+                generalCurriculum.classList.remove('active');
+                developerCurriculum.classList.add('active');
+            }
+        });
+    });
+});
+
 // Accordion functionality for curriculum
 document.addEventListener('DOMContentLoaded', function() {
     const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
+
     accordionHeaders.forEach(header => {
         header.addEventListener('click', function() {
             const accordionItem = this.parentElement;
             const accordionContent = accordionItem.querySelector('.accordion-content');
             const accordionIcon = this.querySelector('.accordion-icon');
             const isActive = this.classList.contains('active');
-            
-            // Close all other accordion items
-            accordionHeaders.forEach(otherHeader => {
+
+            // Get all accordion headers within the same curriculum section
+            const parentCurriculum = this.closest('.curriculum-accordion');
+            const siblingHeaders = parentCurriculum.querySelectorAll('.accordion-header');
+
+            // Close all other accordion items in the same curriculum
+            siblingHeaders.forEach(otherHeader => {
                 if (otherHeader !== this) {
                     otherHeader.classList.remove('active');
                     otherHeader.parentElement.querySelector('.accordion-content').classList.remove('active');
                 }
             });
-            
+
             // Toggle current accordion item
             if (isActive) {
                 this.classList.remove('active');
