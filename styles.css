@@ -941,13 +941,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .developer-open-badge {
     display: inline-block;
-    background: #8B5CF6;
-    color: white;
-    padding: 0.5rem 1.5rem;
+    background: #1a2332;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border: 1px solid #8B5CF6;
     border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
     margin-bottom: 1.5rem;
 }
 
@@ -2190,6 +2191,11 @@ h1, h2, h3, h4, h5, h6 {
         padding: 3rem 0;
     }
 
+    .developer-open-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
     .developer-open-title {
         font-size: 1.75rem;
         padding: 0 20px;
@@ -2555,6 +2561,11 @@ h1, h2, h3, h4, h5, h6 {
     /* Developer open section mobile styles for small screens */
     .developer-open-section {
         padding: 2.5rem 0;
+    }
+
+    .developer-open-badge {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.6rem;
     }
 
     .developer-open-title {
